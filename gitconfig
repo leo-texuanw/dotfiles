@@ -49,8 +49,8 @@
     email = wutexuanleo@outlook.com
 
 [push]
+    origin = release
     default = simple
-
 
 ########
 # Sooo much color
