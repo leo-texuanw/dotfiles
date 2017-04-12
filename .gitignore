@@ -73,6 +73,8 @@ rel/example_project
 /_build
 /cover
 /deps
+/doc
+/.fetch
 erl_crash.dump
 *.ez
 *.beam
