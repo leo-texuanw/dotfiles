@@ -96,6 +96,7 @@ syntax on
 " Solarized
 set background=dark     " or light
 colorscheme solarized
+let g:solarized_termtrans = 1
 
 " Molokai
 " colorscheme molokai
