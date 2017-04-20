@@ -21,6 +21,8 @@ Plugin 'scrooloose/nerdcommenter'       " help do comment
 Plugin 'vim-syntastic/syntastic'        " check syntax
 Plugin 'Yggdroot/indentLine'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'kien/ctrlp.vim'
+    
 
 Plugin 'Valloric/YouCompleteMe'
 " All of your Plugins must be added before the following line
