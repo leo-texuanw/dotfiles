@@ -6,6 +6,8 @@
 
     # Branch
     br = branch
+    ba = branch
+    sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 
     # Commit
     c  = commit
@@ -43,6 +45,9 @@
     # Log
     last = log -1
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+    # other
+    df = diff
 
 [user]
     name = comeonleo
