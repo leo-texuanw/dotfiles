@@ -14,15 +14,17 @@ call vundle#begin('~/.vim/bundle/Vundle.vim/plugins')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'scrooloose/nerdcommenter'       " help do comment
 Plugin 'vim-syntastic/syntastic'        " check syntax
 Plugin 'Yggdroot/indentLine'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'kien/ctrlp.vim'
-    
+Plugin 'ggreer/the_silver_searcher'
+
 
 Plugin 'Valloric/YouCompleteMe'
 " All of your Plugins must be added before the following line
@@ -122,9 +124,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Linebreak on 500 characters
+" Linebreak on 100 characters
 set lbr
-set tw=500
+set tw=100
 "
 set ai "Auto indent
 set si "Smart indent
@@ -139,7 +141,7 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
- 
+
 
 """"""""""""""""""""""""""""""
 " Status line
@@ -167,3 +169,7 @@ map <leader>s? z=
 " Set file encoding
 " set fileencoding=utf-8
 set fileencodings=utf-8,gbk,utf-16,big5
+
+" Show trailing whitespa
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
