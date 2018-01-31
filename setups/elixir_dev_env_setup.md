@@ -12,7 +12,7 @@
 3. Install deps
     + sudo apt-get install -y automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev
 4. Install Erlang
-    1. install dependencies 
+    1. install dependencies
         + Install the build tools (dpkg-dev g++ gcc libc6-dev make)
             sudo apt-get install build-essential m4
         + Automatic configure script builder (debianutils m4 perl)

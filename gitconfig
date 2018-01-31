@@ -62,7 +62,7 @@
 #######
 [color]
     ui = always
-    
+
 [color "diff"]
     frag = magenta
     meta = yellow
