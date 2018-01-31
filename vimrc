@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'pangloss/vim-javascript'
+Plugin 'luochen1990/rainbow'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'scrooloose/nerdcommenter'       " help do comment
 Plugin 'vim-syntastic/syntastic'        " check syntax
@@ -24,6 +25,9 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ggreer/the_silver_searcher'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'mileszs/ack.vim'
+
 
 
 Plugin 'Valloric/YouCompleteMe'
@@ -110,6 +114,9 @@ let g:solarized_termtrans = 1
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
+" luochen1990/Rainbow
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -120,9 +127,9 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Linebreak on 100 characters
 set lbr
