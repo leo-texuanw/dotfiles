@@ -6,7 +6,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin('~/.vim/bundle/Vundle.vim/plugins')
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -104,6 +104,7 @@ syntax on
 " Solarized
 set background=dark     " or light
 colorscheme solarized
+color solarized
 let g:solarized_termtrans = 1
 
 " Molokai
@@ -178,5 +179,6 @@ map <leader>s? z=
 set fileencodings=utf-8,gbk,utf-16,big5
 
 " Show trailing whitespa
-:highlight ExtraWhitespace ctermbg=red guibg=red
+:highlight ExtraWhitespace ctermbg=red guibg=rec
+:highlight normal ctermbg=black guibg=black
 :match ExtraWhitespace /\s\+$/
