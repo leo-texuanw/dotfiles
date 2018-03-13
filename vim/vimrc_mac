@@ -19,6 +19,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'luochen1990/rainbow'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'neovimhaskell/haskell-vim'
 Plugin 'scrooloose/nerdcommenter'       " help do comment
 Plugin 'vim-syntastic/syntastic'        " check syntax
 Plugin 'Yggdroot/indentLine'
@@ -27,7 +28,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ggreer/the_silver_searcher'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mileszs/ack.vim'
-
 
 
 Plugin 'Valloric/YouCompleteMe'
@@ -46,6 +46,7 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -53,7 +54,6 @@ set history=700
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
 
 " Show line number
 set number
@@ -90,7 +90,7 @@ set mat=2
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
-set t_vb=
+"set t_vb=
 set tm=500
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -100,12 +100,18 @@ set tm=500
 syntax enable
 syntax on
 
+set t_Co=256
 
 " Solarized
-set background=dark     " or light
-colorscheme solarized
-color solarized
 let g:solarized_termtrans = 1
+let g:solarized_termcolors = 256
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
+"color solarized
 
 " Molokai
 " colorscheme molokai
@@ -128,9 +134,9 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Linebreak on 100 characters
 set lbr
@@ -150,28 +156,24 @@ autocmd BufReadPost *
 set viminfo^=%
 
 
-
 """"""""""""""""""""""""""""""
 " Status line
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ " Line:\ %l
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+" map <leader>ss :setlocal spell!<cr>
 
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+" " Shortcuts using <leader>
+" map <leader>sn ]s
+" map <leader>sp [s
+" map <leader>sa zg
+" map <leader>s? z=
 
 
 " Set file encoding
@@ -179,6 +181,20 @@ map <leader>s? z=
 set fileencodings=utf-8,gbk,utf-16,big5
 
 " Show trailing whitespa
-:highlight ExtraWhitespace ctermbg=red guibg=rec
-:highlight normal ctermbg=black guibg=black
-:match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=Gray guibg=Gray
+match ExtraWhitespace /\s\+$/
+
+highlight Normal ctermbg=Black guibg=Black ctermfg=Gray
+highlight Comment ctermfg=LightGreen
+highlight Cursor ctermbg=Green ctermfg=Green
+
+""""""""""""""""""""
+"" For Haskell vim
+""""""""""""""""""""
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
