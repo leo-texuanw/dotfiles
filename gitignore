@@ -57,6 +57,9 @@ tags
 ########
 # Lang #
 ########
+### C/C++
+*.out
+
 ### Erlang
 .eunit
 deps
@@ -84,6 +87,10 @@ rel/example_project
 erl_crash.dump
 # Generated on crash by NPM
 npm-debug.log
+
+### Haskell
+*.hi
+*.o
 
 #############
 # Framework #

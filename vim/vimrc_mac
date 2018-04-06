@@ -14,21 +14,23 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'pangloss/vim-javascript'
-Plugin 'luochen1990/rainbow'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'neovimhaskell/haskell-vim'
-Plugin 'scrooloose/nerdcommenter'       " help do comment
-Plugin 'vim-syntastic/syntastic'        " check syntax
-Plugin 'Yggdroot/indentLine'
-Plugin 'suan/vim-instant-markdown'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'suan/vim-instant-markdown'
 Plugin 'ggreer/the_silver_searcher'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mileszs/ack.vim'
 
+Plugin 'scrooloose/nerdcommenter'       " help do comment
+Plugin 'Yggdroot/indentLine'
+Plugin 'vim-syntastic/syntastic'        " check syntax
+Plugin 'pangloss/vim-javascript'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'neovimhaskell/haskell-vim'
+
+Plugin 'luochen1990/rainbow'
 
 Plugin 'Valloric/YouCompleteMe'
 " All of your Plugins must be added before the following line
@@ -99,8 +101,6 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 syntax on
-
-set t_Co=256
 
 " Solarized
 let g:solarized_termtrans = 1
@@ -184,9 +184,9 @@ set fileencodings=utf-8,gbk,utf-16,big5
 highlight ExtraWhitespace ctermbg=Gray guibg=Gray
 match ExtraWhitespace /\s\+$/
 
-highlight Normal ctermbg=Black guibg=Black ctermfg=Gray
-highlight Comment ctermfg=LightGreen
-highlight Cursor ctermbg=Green ctermfg=Green
+highlight Comment ctermfg=Gray
+highlight Normal ctermfg=LightGray
+highlight LineNr ctermbg=Black ctermfg=Gray
 
 """"""""""""""""""""
 "" For Haskell vim
