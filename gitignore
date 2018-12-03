@@ -60,6 +60,9 @@ tags
 ### C/C++
 *.out
 
+### Java
+*.class
+
 ### Erlang
 .eunit
 deps
@@ -91,6 +94,9 @@ npm-debug.log
 ### Haskell
 *.hi
 *.o
+
+### Python
+__pycache__
 
 #############
 # Framework #

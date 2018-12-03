@@ -1,14 +1,15 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set Vundle
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              "be iMproved, required
+filetype off                  "required
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Set Vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -19,6 +20,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'suan/vim-instant-markdown'
+Plugin 'vim-latex/vim-latex'
 Plugin 'ggreer/the_silver_searcher'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mileszs/ack.vim'
@@ -27,8 +29,9 @@ Plugin 'scrooloose/nerdcommenter'       " help do comment
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'        " check syntax
 Plugin 'pangloss/vim-javascript'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'neovimhaskell/haskell-vim'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'jalvesaq/Nvim-R'
 
 Plugin 'luochen1990/rainbow'
 
@@ -48,23 +51,26 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set path+=**
+set wildmenu
+syntax enable
+
 set history=700
 
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" Show line number
+"Show line number
 set number
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*.hi
 
 " Always show current position
 set ruler
@@ -99,7 +105,6 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable
 syntax on
 
 " Solarized
@@ -110,15 +115,16 @@ if has('gui_running')
 else
   set background=dark
 endif
+set t_Co=256
+color solarized
 colorscheme solarized
-"color solarized
 
 " Molokai
 " colorscheme molokai
 " let g:molokai_original = 1
 " let g:rehash256 = 1
 
-" Set utf8 as standard encoding and en_US as the standard language
+"Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " luochen1990/Rainbow
@@ -138,9 +144,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Linebreak on 100 characters
+" Linebreak on 80 characters
 set lbr
-set tw=100
+set tw=80
 "
 set ai "Auto indent
 set si "Smart indent
@@ -168,7 +174,6 @@ set laststatus=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
 " map <leader>ss :setlocal spell!<cr>
-
 " " Shortcuts using <leader>
 " map <leader>sn ]s
 " map <leader>sp [s
@@ -176,8 +181,6 @@ set laststatus=2
 " map <leader>s? z=
 
 
-" Set file encoding
-" set fileencoding=utf-8
 set fileencodings=utf-8,gbk,utf-16,big5
 
 " Show trailing whitespa
@@ -198,3 +201,6 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+"""" For LaTeX
+let g:tex_flavor='latex'
