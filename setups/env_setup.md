@@ -10,4 +10,3 @@
     + cd .vim/bundle
     + `git clone https://github.com/VundleVim/Vundle.vim.git`
     + `:PluginInstall` inside vim or `vim +PluginInstall +qall` in command line
-
