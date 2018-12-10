@@ -181,3 +181,7 @@ set fileencodings=utf-8,gbk,utf-16,big5
 " Show trailing whitespa
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
+
+:highlight Comment ctermfg=Gray
+:highlight Normal ctermbg=Black
+:highlight LineNr ctermbg=Black ctermfg=Gray
