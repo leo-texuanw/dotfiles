@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
 
 Plugin 'suan/vim-instant-markdown'
 Plugin 'vim-latex/vim-latex'
@@ -56,7 +57,6 @@ filetype plugin on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set path+=**
 set wildmenu
-syntax enable
 
 set history=700
 
@@ -105,24 +105,25 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
+syntax enable
 syntax on
 
 " Solarized
-let g:solarized_termtrans = 1
-let g:solarized_termcolors = 256
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-set t_Co=256
-color solarized
-colorscheme solarized
+" let g:solarized_termtrans = 1
+" let g:solarized_termcolors = 256
+" if has('gui_running')
+"   set background=light
+" else
+"   set background=dark
+" endif
+" set t_Co=256
+" color solarized
+" colorscheme solarized
 
-" Molokai
-" colorscheme molokai
-" let g:molokai_original = 1
-" let g:rehash256 = 1
+"Molokai
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 "Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -173,12 +174,12 @@ set laststatus=2
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-" map <leader>ss :setlocal spell!<cr>
-" " Shortcuts using <leader>
-" map <leader>sn ]s
-" map <leader>sp [s
-" map <leader>sa zg
-" map <leader>s? z=
+map <leader>ss :setlocal spell!<cr>
+" Shortcuts using <leader>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
 
 
 set fileencodings=utf-8,gbk,utf-16,big5
@@ -187,8 +188,8 @@ set fileencodings=utf-8,gbk,utf-16,big5
 highlight ExtraWhitespace ctermbg=Gray guibg=Gray
 match ExtraWhitespace /\s\+$/
 
-highlight Comment ctermfg=Gray
-highlight Normal ctermfg=LightGray
+highlight Comment ctermfg=Blue
+highlight Normal  ctermbg=Black ctermfg=LightGray
 highlight LineNr ctermbg=Black ctermfg=Gray
 
 """"""""""""""""""""
