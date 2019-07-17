@@ -50,8 +50,8 @@
     df = diff
 
 [user]
-    name = comeonleo
-    email = wutexuanleo@outlook.com
+	  name = Leo Wu
+	  email = wutexuanleo@outlook.com
 
 [push]
     origin = release
