@@ -205,3 +205,6 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 
 """" For LaTeX
 let g:tex_flavor='latex'
+
+"""" For syntastic
+let g:syntastic_python_checkers = ['flake8', 'pylint']
