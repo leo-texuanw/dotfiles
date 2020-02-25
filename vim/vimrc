@@ -29,6 +29,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'       " help do comment
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'        " check syntax
+Plugin 'rust-lang/rust.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'elixir-editors/vim-elixir'
@@ -208,3 +209,8 @@ let g:tex_flavor='latex'
 
 """" For syntastic
 let g:syntastic_python_checkers = ['flake8', 'pylint']
+
+"""" For Rust
+let g:rust_clip_command = 'pbcopy'
+"""" Replace by the next if in Linux
+"" let g:rust_clip_command = 'xclip -selection clipboard'
