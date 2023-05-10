@@ -49,9 +49,15 @@
     # other
     df = diff
 
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+
 [user]
-	  name = Leo Wu
-	  email = wutexuanleo@outlook.com
+	name = Leo Wu
+	email = wutexuanleo@outlook.com
 
 [push]
     origin = release

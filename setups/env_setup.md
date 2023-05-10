@@ -4,7 +4,7 @@
         ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     + Clone `git clone git@github.com:xingzaizhailu/dotfiles.git`
     + `ln -s ~/workspace/dotfiles/gitconfig ~/.gitconfig`
-    + `ln -s ~/workspace/dotfiles/vimrc ~/.vimrc`
+    + `ln -s ~/workspace/dotfiles/vim/vimrc ~/.vimrc`
 3. Install Vundle
     + `mkdir -p ~/.vim/bundle/`
     + cd .vim/bundle
